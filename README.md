@@ -1,6 +1,6 @@
 # 2017118110_Android
 
-# 推送时遇到的问题以及解决步骤
+# 推送时遇到的问题以及解决步骤（补充）
 在sourcetree提交文件后要推送到远程库的时候遇到了问题：
 ![Image text](https://raw.githubusercontent.com/15994919867/2017118110_Android/master/img-folder/pushingerror.png)
 
