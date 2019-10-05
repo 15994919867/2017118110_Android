@@ -38,6 +38,31 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        Button startFirstActivity = (Button)findViewById(R.id.bn1);
+        Button startSecondActivity = (Button)findViewById(R.id.bn2);
+        Button startThirdActivity = (Button)findViewById(R.id.bn3);
+        startFirstActivity.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,FirstActivity.class);
+                startActivity(intent);
+            }
+        });
+        startSecondActivity.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+        startThirdActivity.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ThirdActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     protected void onStart() {
