@@ -10,7 +10,8 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/start_normal_activity"
@@ -55,6 +56,36 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="bn3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/bn_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="call" />
+
+        <Button
+            android:id="@+id/bn_baidu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="baidu" />
+
+        <Button
+            android:id="@+id/bn_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="map" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

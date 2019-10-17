@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -21,23 +22,35 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         Log.d(TAG,"onCreate");
         setContentView(R.layout.activity_main);
-        Button startNormalActivity = (Button)findViewById(R.id.start_normal_activity);
-        Button startDialogActivity = (Button)findViewById(R.id.start_dialog_activity);
-        startNormalActivity.setOnClickListener(new View.OnClickListener() {
+
+        Button bnCall = (Button)findViewById(R.id.bn_call);
+        Button bnBaidu = (Button)findViewById(R.id.bn_baidu);
+        Button bnMap = (Button)findViewById(R.id.bn_map);
+        bnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"You clicked Button start_normal_activity",Toast.LENGTH_SHORT).show();//点击提示
-                Intent intent = new Intent(MainActivity.this,NormalActivity.class);
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:10086"));
                 startActivity(intent);
             }
         });
-        startDialogActivity.setOnClickListener(new View.OnClickListener() {
+        bnBaidu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,DialogActivity.class);
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
                 startActivity(intent);
             }
         });
+        bnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("geo:"));
+                startActivity(intent);
+            }
+        });
+
 
         Button startFirstActivity = (Button)findViewById(R.id.bn1);
         Button startSecondActivity = (Button)findViewById(R.id.bn2);
